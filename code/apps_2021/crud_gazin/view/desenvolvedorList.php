@@ -27,29 +27,7 @@ include_once(__DIR__."/../superior.php");
                   <th>Ações</th>
               </tr>
           </thead>
-          <tbody>
-            <?php
-            if(isset($desenvolvedor)){
-            ?>
-              <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <div class="text-center">
-                      <div class="btn-group">
-                        <button class="btn btn-primary btnEditar">Editar</button>
-                        <button class="btn btn-danger btnEditar">Eliminar</button>
-                      </div>
-                    </div>  
-                  </td> 
-              </tr>
-            <?php
-            }
-            ?> 
+          <tbody> 
           </tbody>
           <tfoot>
               <tr>
@@ -78,54 +56,6 @@ include_once(__DIR__."/../superior.php");
         </button>
       </div>
       <form id="formDesenvolvedor">
-        <!--
-        <div class="modal-body">
-            <div class="form-group">
-              <label for="nome" >Nome</label>
-              <input type="text" maxlength="255" required class="form-control is-valid" id="nome">
-              <div class="invalid-feedback">
-                Por favor, digite o nome do desenvolvedor.
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="sexo">Sexo</label>
-              <select class="form-control is-valid" required id="sexo">
-                <option selected value="M">M</option>
-                <option value="F">F</option>
-              </select>
-              <div class="valid-feedback">
-                Tudo certo!
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="idade">Idade</label>
-              <input type="number" required min=10 max=75 value="10" class="form-control is-valid" id="idade">
-              <div class="valid-feedback">
-                Tudo certo!
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="hobby">Hobby</label>
-              <span class="caracteres">250</span> Restantes <br>
-              <textarea class="form-control is-valid" required id="hobby" rows="3" maxlength="500">  
-              </textarea>
-              <div class="invalid-feedback">
-                Por favor, digite o hobby do desenvolvedor.
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="dataNacimento">Data Nascimento</label>
-              <input type="date" id="dataNacimento" class="form-control is-valid" required>
-              <div class="valid-feedback">
-                Tudo certo!
-              </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="submit" id="btnSalvar" class="btn btn-primary">Salvar</button>
-        </div>
-        -->
         <div class="modal-body">
             <div class="form-group">
               <label for="nome" >Nome</label>
@@ -139,11 +69,11 @@ include_once(__DIR__."/../superior.php");
                   <option value="F">F</option>
                 </select>
               </div>  
-              <div class="form-group col-md-4">  
+              <div class="form-group col-md-3">  
                 <label for="idade">Idade</label>
                 <input type="number" required min=10 max=75 value="10" class="form-control" id="developer_idade">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-5">
                 <label for="dataNacimento">Data Nascimento</label>
                 <input type="date" id="developer_dataNascimento" class="form-control" required>
               </div>

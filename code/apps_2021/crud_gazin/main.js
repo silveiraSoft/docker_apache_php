@@ -1,31 +1,4 @@
-$(document).ready(function() {    
-/*
-tabelaDesenvolvedores = $('#tabelaDesenvolvedores').DataTable({
-//para cambiar el lenguaje a español
-    "columnDefs":[{
-    "targets": -1,
-    "data":null,
-    "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar'>Editar</button><button class='btn btn-danger btnBorrar'>Borrar</button></div></div>"  
-    }],
-    "language": {
-            "lengthMenu": "Mostrar _MENU_ registros",
-            "zeroRecords": "Não se encontraram resultados",
-            "info": "Mostrando registros do _START_ ao _END_ de um total de _TOTAL_ registros",
-            "infoEmpty": "Mostrando registros do 0 ao 0 de um total de 0 registros",
-            "infoFiltered": "(filtrado de um total de _MAX_ registros)",
-            "sSearch": "Buscar:",
-            "oPaginate": {
-                "sFirst": "Primeiro",
-                "sLast":"Último",
-                "sNext":"Seguinte",
-                "sPrevious": "Anterior"
-		     },
-		     "sProcessing":"Processando...",
-        }
-
-});
-*/
-
+$(document).ready(function() {
 var user_id, opcion;
 opcion = 4;
 //jQuery.support.cors = true;    
@@ -45,20 +18,20 @@ tabelaDesenvolvedores = $('#tabelaDesenvolvedores').DataTable({
         {"data": "idade"},
         {"data": "hobby"},
         {"data": "dataNascimento"},
-        
         {"defaultContent": 
-        "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>Editar</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>Borrar</i></button></div></div>"
+        "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>Editar</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>Remover</i></button></div></div>"
         }
+        
         
     ]
     //linguagem Português
     ,"columnDefs":[{
-    "targets": -1,
-    "data":null,
-    "defaultContent":"<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>edit</i></button><button class='btn btn-danger btn-sm btnBorrar'><i class='material-icons'>delete</i></button></div></div>" 
-    /*"<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar'>Editar</button><button class='btn btn-danger btnBorrar'>Borrar</button></div></div>"  
-    */
-    }],
+                    "targets": -1,
+                    "data":null,
+                    "defaultContent":"<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'><i class='material-icons'>Editar</i></button><button class='btn btn-danger btn-sm btnBorrar'>Remover</button></div></div>"
+                    }
+                ]
+    ,
     "language": {
         "lengthMenu": "Mostrar _MENU_ registros",
         "zeroRecords": "Não se encontraram resultados",
@@ -76,7 +49,7 @@ tabelaDesenvolvedores = $('#tabelaDesenvolvedores').DataTable({
     }
 }); 
 
-$(document).on("keydown", "#hobby", function () {
+$(document).on("keydown", "#developer_hobby", function () {
     var caracteresRestantes = 255;
     var caracteresDigitados = parseInt($(this).val().length);
     var caracteresRestantes = caracteresRestantes - caracteresDigitados;
